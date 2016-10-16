@@ -3,7 +3,7 @@
  * @author Molloh
  * @version Oct 15, 2016
  */
-public interface UserInfoBLService_Stub implements SalesBLService {
+public class UserInfoBLService_Stub implements SalesBLService {
     String userId;
     String hotelId;
     String info;
