@@ -3,7 +3,7 @@
  * @author lienming
  * @version Oct 16, 2016
  */
-public interface AccountBLService_Stub implements AccountBLService {
+public class AccountBLService_Stub implements AccountBLService {
 	String memberName;
 	String password;
 	String id;
