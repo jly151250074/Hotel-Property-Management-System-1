@@ -9,4 +9,8 @@ public class Client {
         AccountBLService_Driver accountBLService_driver= new AccountBLService_Driver(accountController);
 		driver.drive(accontController);	
      }
+    HotelBLservice hotelController = new HotelBLservice();
+        HotelBLservice_Driver hotelBLservice_driver= new HotelBLservice_Driver();
+		driver.drive(hotelController);	
+     }
 }
