@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PMS/PMS.iml" filepath="$PROJECT_DIR$/PMS/PMS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PMSServer/PMSServer.iml" filepath="$PROJECT_DIR$/PMSServer/PMSServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Vector.iml" filepath="$PROJECT_DIR$/Vector.iml" />
+    </modules>
+  </component>
+</project>

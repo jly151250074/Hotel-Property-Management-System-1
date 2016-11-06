@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="KotlinJavaRuntime">
+    <archive path="C:/Users/Molloh/Documents/JetBrains/IdeaProjects/Vector/lib/kotlin-runtime.jar" />
+    <archive path="C:/Users/Molloh/Documents/JetBrains/IdeaProjects/Vector/lib/kotlin-reflect.jar" />
+  </library>
+</eclipse-userlibraries>
+
