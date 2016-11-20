@@ -1,14 +1,19 @@
-package po;
-
+package vo;
+/**
+ * @ author 金灵益
+ * @ version 2016/11/20
+ * @ description
+ */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import common.ResultMessage;
 import common.RoomType;
+import po.HotelRoom;
 
 
-public class HotelPo{
+public class HotelVo{
 	private String hotelName;
 	private String hotelID;
 	private String hotelAddress;
@@ -20,6 +25,7 @@ public class HotelPo{
 	private int numOfpoint;                                           //酒店被评分的次数
 	private int stars;                                                //酒店星级
 	private Map<String,HotelRoom> map;
+	private int price;
 	
 	public ResultMessage showhotelInfo(){
 		return ResultMessage.SUCCEED;
@@ -49,8 +55,8 @@ public class HotelPo{
 		return inBusiness;
 	}
 	
-	public int getOriginPrice(RoomType type){
-		return 0;
+	public int getOriginPrice(){
+		return price;
 	}
 	
 	public String showInfo(){

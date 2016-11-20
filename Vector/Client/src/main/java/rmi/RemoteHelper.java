@@ -3,6 +3,7 @@ package rmi;
 import java.rmi.Remote;
 
 import dataService.dao.AccountDao;
+import dataService.dao.HotelDao;
 import dataService.dao.MemberDao;
 
 /**
@@ -32,6 +33,10 @@ public class RemoteHelper {
 
     public MemberDao getMemberDao(){
         return (MemberDao)remote;
+    }
+    
+    public HotelDao getHotelDao(){
+    	return (HotelDao) remote;
     }
 
 }

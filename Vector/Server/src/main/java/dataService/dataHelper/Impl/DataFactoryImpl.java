@@ -3,6 +3,7 @@ package dataService.dataHelper.Impl;
 import dataService.dataHelper.AccountDataHelper;
 import dataService.dataHelper.MemberDataHelper;
 import dataService.dataHelper.DataFactory;
+import dataService.dataHelper.HotelDataHelper;
 
 /**
  * Created by Administrator on 2016-11-13.
@@ -18,5 +19,11 @@ public class DataFactoryImpl implements DataFactory {
         MemberDataHelper memberDao = new MemberDataTxtHelper();
         return memberDao;
     }
+
+	@Override
+	public HotelDataHelper getHotelDataHelper() {
+		HotelDataHelper hotelDao = new HotelDataTxtHelper();
+		return hotelDao;
+	}
 
 }

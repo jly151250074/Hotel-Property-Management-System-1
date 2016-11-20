@@ -1,0 +1,6 @@
+goodgoodgood
+goodgood
+good
+*
+bad
+*
