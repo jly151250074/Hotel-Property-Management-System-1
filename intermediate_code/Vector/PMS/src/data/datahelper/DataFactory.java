@@ -6,4 +6,10 @@ package data.datahelper;
  * @ description
  */
 public interface DataFactory {
+
+    public AccountDataHelper getAccountDataHelper();
+
+    public MemberDataHelper getMemberDataHelper();
+
+
 }

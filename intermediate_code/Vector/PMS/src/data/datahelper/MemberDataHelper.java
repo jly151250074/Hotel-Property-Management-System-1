@@ -1,9 +1,12 @@
 package data.datahelper;
 
-/**
- * @ author Molloh
- * @ version 2016/11/6
- * @ description
- */
+import po.MemberPo;
+
+import java.util.Map;
+
 public interface MemberDataHelper {
+
+    public Map<Integer, MemberPo> getMemberData();
+
+    public void updateMemberData(Map<Integer, MemberPo> map);
 }
