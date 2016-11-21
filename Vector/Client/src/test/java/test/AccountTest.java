@@ -1,7 +1,5 @@
 package test;
 
-import common.AccountType;
-import common.ResultMessage;
 import presentation.controller.Impl.LoginViewControllerServiceImpl;
 import presentation.controller.Impl.RegisterViewControllerSerivceImpl;
 import presentation.controller.LoginViewControllerService;
