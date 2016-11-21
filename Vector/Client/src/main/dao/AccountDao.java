@@ -8,9 +8,9 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 /**
- * @ author lienming
- * @ version 2016/11/20
- * @ description
+ * @author lienming
+ * @version 2016/11/20
+ * @description
  */
 public interface AccountDao extends Remote {
 
