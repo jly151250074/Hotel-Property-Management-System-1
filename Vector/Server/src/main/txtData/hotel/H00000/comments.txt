@@ -1,6 +1,0 @@
-goodgoodgood
-goodgood
-good
-*
-bad
-*

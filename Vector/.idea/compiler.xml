@@ -22,11 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Vector" />
+        <module name="VectorClient" />
+        <module name="VectorServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Vector" target="1.5" />
+      <module name="VectorClient" target="1.8" />
+      <module name="VectorServer" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

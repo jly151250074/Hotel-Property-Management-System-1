@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eclipse-userlibraries />
+<eclipse-userlibraries>
+  <library name="Maven: cn.edu.nju.3B326:VectorInterface:1.0-SNAPSHOT" />
+</eclipse-userlibraries>
 

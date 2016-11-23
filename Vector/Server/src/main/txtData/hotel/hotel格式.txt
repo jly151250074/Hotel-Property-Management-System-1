@@ -1,4 +1,0 @@
-ID   /     名称   /   地址   /  商圈  / 联系电话   /星级  / 评分  /评分人数  / 简介
-String    String     String    String     String    int   double    int       String
-
-用 / 隔开
