@@ -1,4 +1,4 @@
-package dataService.dao;
+package dataService.dao.service;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
