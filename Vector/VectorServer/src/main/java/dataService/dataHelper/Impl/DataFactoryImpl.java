@@ -6,7 +6,7 @@ import dataService.dataHelper.service.HotelDataHelper;
 import dataService.dataHelper.service.MemberDataHelper;
 
 /**
- * Created by Administrator on 2016-11-13.
+ * Updated by lienming on 2016-11-27.
  */
 public class DataFactoryImpl implements DataFactory {
 
@@ -21,9 +21,9 @@ public class DataFactoryImpl implements DataFactory {
     }
 
 
-	public HotelDataHelper getHotelDataHelper() {
-		HotelDataHelper hotelDao = new HotelDataTxtHelper();
-		return hotelDao;
-	}
+    public HotelDataHelper getHotelDataHelper() {
+	HotelDataHelper hotelDao = new HotelDataTxtHelper();
+	return hotelDao;
+    }
 
 }
