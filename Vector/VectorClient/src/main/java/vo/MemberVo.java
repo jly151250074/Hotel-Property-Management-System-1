@@ -1,10 +1,13 @@
 package vo;
 
+import java.io.Serializable;
+
 import common.Sex;
 import po.MemberPo;
 
-public class MemberVo {
-	private  int id;
+public class MemberVo implements Serializable{
+	
+	private  String id;
 	private  int credit;
 	private  String name;
 	private  String phone;
@@ -20,8 +23,8 @@ public class MemberVo {
 		this.sex=po.getSex();
 	}
 
-	public int getId(){ return this.id; }
-	public void setId(int id){ this.id=id;}
+	public String getId(){ return this.id; }
+	public void setId(String id){ this.id=id;}
 
 	public int getCredit(){ return this.credit; }
 	public void setCredit(int credit){this.credit=credit; }
@@ -37,7 +40,5 @@ public class MemberVo {
 
 	public Sex getSex(){ return this.sex; }
 	public void setSex(Sex sex){ this.sex = sex ; }
-
-
 
 }
