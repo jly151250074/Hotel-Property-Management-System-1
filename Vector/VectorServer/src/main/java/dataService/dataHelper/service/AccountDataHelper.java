@@ -1,4 +1,4 @@
-package dataService.dataHelper.service;
+package dataService.dataHelper;
 
 import po.AccountPo;
 
@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * @ author lienming
- * @ version 2016/11/13
+ * @ version 2016-11-27
  * @ description
  */
 public interface AccountDataHelper {
