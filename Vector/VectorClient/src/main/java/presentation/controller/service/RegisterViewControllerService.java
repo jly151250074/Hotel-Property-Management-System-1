@@ -1,22 +1,21 @@
-package presentation.controller.service;
-
-import java.rmi.RemoteException;
+package presentation.controller;
 
 import common.ResultMessage;
 
 /**
- * @ author Molloh
- * @ version 2016/11/6
+ * @ author lienming
+ * @ version 2016-11-27
  * @ description
  */
 public interface RegisterViewControllerService {
 
     /**
      * 注册账号
-     * @return 注册账号是否成功
+     * @return id:String (or "FAIL")
      * @author lienming
-     * @version Oct 19, 2016
+     * @version 2016-11-27
      */
-    public String register(String memberName,String password) throws RemoteException;
+    public String register(String memberName,String password);
 
+    public ResultMessage modify(String id,String newPassword);
 }
