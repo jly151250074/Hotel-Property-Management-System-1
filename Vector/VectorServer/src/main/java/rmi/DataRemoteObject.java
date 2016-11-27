@@ -3,24 +3,31 @@ package rmi;
 import common.AccountType;
 import common.ResultMessage;
 import dataService.dao.service.AccountDao;
+import dataService.dao.service.MemberDao;
 import dataService.dao.impl.AccountDaoImpl;
+import dataService.dao.Impl.MemberDaoImpl;
+
 import po.AccountPo;
+import vo.AccountVo;
+import vo.MemberVo;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
- * Created by Administrator on 2016-11-20.
+ * Updated by lienming on 2016-11-27.
  */
-public class DataRemoteObject extends UnicastRemoteObject implements AccountDao{
+public class DataRemoteObject extends UnicastRemoteObject implements AccountDao,MemberDao{
 
 	 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     private AccountDao accountDao;
-
+    private MemberDao memberDao ;
+	
     protected DataRemoteObject() throws RemoteException{
         accountDao = AccountDaoImpl.getInstance();
+	memberDao = MemberDaoImpl.getInstance();
     }
 
 
@@ -56,7 +63,25 @@ public class DataRemoteObject extends UnicastRemoteObject implements AccountDao{
     public ResultMessage delete(AccountPo po) throws RemoteException{
         return accountDao.delete(po);
     }
+     
+     /* MemberDao接口方法  */
+    
+    public int getCredit(String id)throws RemoteException {
+    	return memberDao.getCredit(id);
+    }
 
+    public ResultMessage chargeCredit(String id, int amount)throws RemoteException {
+    	return memberDao.chargeCredit(id, amount);
+    }
+
+    public MemberVo getInfo(String id)throws RemoteException {
+    	return memberDao.getInfo(id);
+    }
+
+    public ResultMessage modifyInfo(MemberVo vo)throws RemoteException {
+    	return memberDao.modifyInfo(vo);
+    }
+    
 
 
 }
