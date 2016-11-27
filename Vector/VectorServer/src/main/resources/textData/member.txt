@@ -1,0 +1,2 @@
+N00002;XiJinPing;null;null;null;0
+N00001;JiangZeMin;123456789;Beijing;MALE;600
