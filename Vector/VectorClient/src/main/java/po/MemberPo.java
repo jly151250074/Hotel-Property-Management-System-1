@@ -4,18 +4,18 @@ import common.Sex;
 
 /**
  * @ author lienming
- * @ version Nov 13,2016
+ * @ version 2016-11-27
  * @ description
  */
 public class MemberPo {
-    private  int id;
+    private  String id;
     private  int credit;
     private  String name;
     private  String phone;
     private  String address;
     private  Sex sex;
 
-    public MemberPo(int id,String name, String phone, String address,
+    public MemberPo(String id,String name, String phone, String address,
                       Sex sex,int credit)
     {
         this.id=id;
@@ -26,8 +26,8 @@ public class MemberPo {
         this.credit=credit;
     }
 
-    public int getId(){ return this.id; }
-    public void setId(int id){ this.id=id;}
+    public String getId(){ return this.id; }
+    public void setId(String id){ this.id=id;}
 
     public int getCredit(){ return this.credit; }
     public void setCredit(int credit){this.credit=credit; }
