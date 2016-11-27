@@ -4,7 +4,7 @@ import common.AccountType;
 
 /**
  * @ author Lienming
- * @ version 2016/11/18
+ * @ version 2016/11/27
  * @ description
  */
 public class AccountPo {
