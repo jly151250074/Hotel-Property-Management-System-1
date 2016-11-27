@@ -1,15 +1,13 @@
 package presentation.controller.Impl;
 
-import java.rmi.RemoteException;
-
-import businessLogic.service.AccountBlService;
-import businessLogic.impl.AccountBlServiceImpl;
+import businesslogic.AccountBlService;
+import businesslogic.impl.AccountBlServiceImpl;
 import common.AccountType;
 import common.ResultMessage;
-import presentation.controller.service.LoginViewControllerService;
+import presentation.controller.LoginViewControllerService;
 
 /**
- * Created by Administrator on 2016-11-19.
+ * updated by Administrator on 2016-11-27.
  */
 public class LoginViewControllerServiceImpl implements LoginViewControllerService {
 
@@ -27,11 +25,11 @@ public class LoginViewControllerServiceImpl implements LoginViewControllerServic
         accountBlService = AccountBlServiceImpl.getInstance();
     }
 
-    public AccountType login(String memberName, String password) throws RemoteException{
+    public AccountType login(String memberName, String password) {
         return accountBlService.login(memberName,password);
     }
 
-    public ResultMessage logout(String id) throws RemoteException{
+    public ResultMessage logout(String id){
         return accountBlService.logout(id);
     }
 
