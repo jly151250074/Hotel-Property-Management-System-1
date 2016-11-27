@@ -1,6 +1,4 @@
-package dataService.dataHelper.Impl;
-
-import dataService.dataHelper.service.AccountDataHelper;
+import dataService.dataHelper.AccountDataHelper;
 import po.AccountPo;
 
 import java.io.*;
@@ -9,17 +7,13 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2016-11-13.
+ * Updated by lienming on 2016-11-27.
  */
 public class AccountDataTxtHelper implements AccountDataHelper {
 
     public Map<String, AccountPo> getAccountData() {
         Map<String, AccountPo> map = new HashMap<String, AccountPo>();
-        //File file = new File("src/txtData/account.txt");
-
-        //参考https://www.mkyong.com/java/java-read-a-file-from-resources-folder/
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("textData/account.txt").getFile());
+        File file = new File("src/txtData/account.txt");
         try {
             InputStreamReader reader = new InputStreamReader(new FileInputStream(
                     file), "UTF-8");
@@ -64,6 +58,21 @@ public class AccountDataTxtHelper implements AccountDataHelper {
             Iterator<Map.Entry<String, AccountPo>> iterator = map.entrySet().iterator();
             while(iterator.hasNext()){
                 Map.Entry<String, AccountPo> entry = iterator.next();
+                AccountPo accountPo = entry.getValue();
+                String str = accountPo.getMemberName()+";"+accountPo.getPassword()+";"
+                        +accountPo.getId()+";"+accountPo.getLogState();
+                writer.write(str);
+                writer.write("\r\n");
+            }
+
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+
                 AccountPo accountPo = entry.getValue();
                 String str = accountPo.getMemberName()+";"+accountPo.getPassword()+";"
                         +accountPo.getId()+";"+accountPo.getLogState();
