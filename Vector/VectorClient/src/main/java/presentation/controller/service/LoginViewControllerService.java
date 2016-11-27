@@ -1,6 +1,4 @@
-package presentation.controller.service;
-
-import java.rmi.RemoteException;
+package presentation.controller;
 
 import common.AccountType;
 import common.ResultMessage;
@@ -10,14 +8,13 @@ import common.ResultMessage;
  */
 public interface LoginViewControllerService {
     /**
-     * 用户账号登录
-     * @return 账号登录是否成功，成功返回用户Id,输入非法返回-1,已登入返回-2，账号名或密码错误返回-3，账号不存在返回-4
+     * 用户账号登录s
+     * @return 账号登录是否成功，成功返回用户类型AccountType
      * @author lienming
-     * @version Oct 19, 2016
-     * @throws RemoteException 
+     * @version 2016-11-27
      */
-    public AccountType login(String memberName, String password) throws RemoteException;
+    public AccountType login(String memberName, String password) ;
 
-    public ResultMessage logout(String id) throws RemoteException;
+    public ResultMessage logout(String id) ;
 
 }
