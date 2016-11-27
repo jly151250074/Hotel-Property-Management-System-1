@@ -1,20 +1,21 @@
-package dataService.dao.service;
-
-import common.AccountType;
-import common.ResultMessage;
-import po.AccountPo;
+package dataService.dao;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
+import common.AccountType;
+import common.ResultMessage;
+import po.AccountPo;
+import vo.AccountVo;
+
 /**
  * @ author lienming
- * @ version 2016/11/13
+ * @ version 2016-11-27
  * @ description
  */
 public interface AccountDao extends Remote {
 
-    public AccountType login(String id, String password) throws RemoteException;
+    public AccountType login(String id, String password)  throws RemoteException;
 
     public ResultMessage logout(String id) throws RemoteException;
 
@@ -22,12 +23,12 @@ public interface AccountDao extends Remote {
 
     public ResultMessage modify(String id, String newPassword) throws RemoteException;
 
-    public ResultMessage find(String id) throws RemoteException;
+    public AccountVo find(String id) throws RemoteException;
 
     public ResultMessage insert(AccountPo po) throws RemoteException;
 
     public ResultMessage update(AccountPo po) throws RemoteException;
 
-    public ResultMessage delete(AccountPo po) throws RemoteException;
+    public ResultMessage delete(String id) throws RemoteException;
 
 }
