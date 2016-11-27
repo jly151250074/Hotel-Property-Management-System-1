@@ -1,15 +1,15 @@
-package businessLogic.service;
+package businesslogic;
+
 
 import common.AccountType;
 import common.ResultMessage;
 import po.AccountPo;
-
-import java.rmi.RemoteException;
+import vo.AccountVo;
 
 /**
  * AccountBLService
  * @author lienming
- * @version Oct 16, 2016
+ * @version 2016-11-27
  */
 
 
@@ -17,29 +17,48 @@ public interface AccountBlService {
 
 	/* 1.interface to Member Client*/
 
-	public AccountType login(String id, String password) throws RemoteException;
+	/**
+	 * 登入：Id+密码
+	 * @param id :String     如Member的为:"N00001"
+	 * @param password : String
+	 * @return 用户类型  : AccountType
+	 */
+	public AccountType login(String id, String password);
 
-	public ResultMessage logout(String id) throws RemoteException;
+	/**
+	 * 通过Id登出
+	 * @param id : String
+	 * @return ResultMessage
+	 */
+	public ResultMessage logout(String id);
 
-	public String register(String memberName, String password) throws RemoteException;
+	/**
+	 * @param memberName
+	 * @param password
+	 * @return 返回值为ID（成功）/"FAIL"（失败）
+	 */
+	public String register(String memberName, String password) ;
 
-	public ResultMessage modify(String id, String newPassword) throws RemoteException;
+	public ResultMessage modify(String id, String newPassword) ;
 
-	public ResultMessage checkInput(String input) throws RemoteException;
+	/**
+	 * 长度[4,12] 只能由大小写字符和数字组成
+	 * @param input
+	 * @return ResultMessage
+	 */
+	public ResultMessage checkInput(String input) ;
 
-	public ResultMessage find(String id) throws RemoteException;
+	public AccountVo find(String id);
 
 
 
 	/* 2.interface to Manager Client  */
 
+	public ResultMessage insert(AccountPo po) ;
 
+	public ResultMessage update(AccountPo po) ;
 
-	public ResultMessage insert(AccountPo po) throws RemoteException;
-
-	public ResultMessage update(AccountPo po) throws RemoteException;
-
-	public ResultMessage delete(AccountPo po) throws RemoteException;
+	public ResultMessage delete(String id) ;
 
 	
 
