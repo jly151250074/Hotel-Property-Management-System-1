@@ -1,42 +1,49 @@
-package businessLogic.impl;
+package businesslogic.impl;
 
+import businesslogic.MemberBlService;
 import common.InfoType;
 import common.ResultMessage;
-import dataService.dao.service.MemberDao;
+import dataService.dao.MemberDao;
 import rmi.RemoteHelper;
 import vo.MemberVo;
 
-import java.rmi.RemoteException;
-
 /**
- * Created by lienming on 2016-11-13.
+ * Updated by lienming on 2016-11-27.
  */
-public class MemberBlServiceImpl {
+public class MemberBlServiceImpl implements MemberBlService{
 
     private MemberDao memberDao ;
-
+    
+    private static MemberBlServiceImpl memberBlServiceImpl;
+    
+    public static MemberBlServiceImpl getInstance(){
+    	if(memberBlServiceImpl==null)
+    		memberBlServiceImpl=new MemberBlServiceImpl();
+    	return memberBlServiceImpl;
+    }
+    
     public MemberBlServiceImpl(){
         memberDao = RemoteHelper.getInstance().getMemberDao();
     }
 
-    public int getCredit(String id) throws RemoteException {
+    public int getCredit(String id)  {
         return memberDao.getCredit(id);
     }
 
-    public ResultMessage chargeCredit(String id, int amount) throws RemoteException{
+    public ResultMessage chargeCredit(String id, int amount){
         return memberDao.chargeCredit(id,amount);
     }
 
-    public MemberVo getInfo(String id) throws RemoteException{
+    public MemberVo getInfo(String id){
         return memberDao.getInfo(id);
     }
 
-    public ResultMessage checkInfo(String info, InfoType infoType) throws RemoteException{
+    public ResultMessage checkInfo(String info, InfoType infoType){
         return ResultMessage.SUCCEED;
     }
 
-    public ResultMessage modifyInfo(String id , MemberVo vo) throws RemoteException{
-        return memberDao.modifyInfo(id,vo);
+    public ResultMessage modifyInfo(MemberVo vo){
+        return memberDao.modifyInfo(vo);
     }
 
 }
