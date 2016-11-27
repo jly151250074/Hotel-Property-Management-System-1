@@ -1,13 +1,12 @@
 package presentation.controller.Impl;
 
-import java.rmi.RemoteException;
-
-import businessLogic.service.AccountBlService;
-import businessLogic.impl.AccountBlServiceImpl;
-import presentation.controller.service.RegisterViewControllerService;
+import businesslogic.AccountBlService;
+import businesslogic.impl.AccountBlServiceImpl;
+import common.ResultMessage;
+import presentation.controller.RegisterViewControllerService;
 
 /**
- * Created by Administrator on 2016-11-18.
+ * Updated by lienming on 2016-11-27.
  */
 public class RegisterViewControllerSerivceImpl implements RegisterViewControllerService{
 
@@ -26,7 +25,11 @@ public class RegisterViewControllerSerivceImpl implements RegisterViewController
     }
 
     @Override
-    public String register(String memberName, String password) throws RemoteException{
+    public String register(String memberName, String password){
         return accountBlService.register(memberName,password);
+    }
+    
+    public ResultMessage modify(String id,String newPassword){
+    	return accountBlService.modify(id, newPassword);
     }
 }
