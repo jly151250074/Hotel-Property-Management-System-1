@@ -1,9 +1,11 @@
 package vo;
 
+import java.io.Serializable;
+
 import common.AccountType;
 import po.AccountPo;
 
-public class AccountVo {
+public class AccountVo  implements Serializable{
     private String memberName;
     private String password;
     private String id;
